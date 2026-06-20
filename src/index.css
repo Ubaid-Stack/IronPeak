@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+:root {
+  /* Primary */
+  --color-primary: #0a0b0e;
+  --color-secondary: #15171c;
+  --color-surface: #1e2128;
+
+  /* CTAs */
+  --color-cta-primary: #d4ff47;
+  --color-cta-primary-hover: #c4f035;
+  --color-cta-secondary: #2563eb;
+  --color-cta-secondary-hover: #1d4ed8;
+
+  /* Text */
+  --color-text-white: #ffffff;
+  --color-text-soft: #9ca3af;
+
+  /* Accents */
+  --color-accent-pop: #ec4899;
+  --color-success: #34d399;
+
+  /* Gradients */
+  --gradient-hero: radial-gradient(ellipse at 70% 50%, #1e2128 0%, #0a0b0e 70%);
+  --gradient-cta: linear-gradient(135deg, #d4ff47 0%, #b8e63a 100%);
+  --gradient-card: linear-gradient(145deg, #15171c 0%, #1a1d24 100%);
+
+  /* Shadows */
+  --shadow-glow: 0 0 40px rgba(212, 255, 71, 0.15);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+}

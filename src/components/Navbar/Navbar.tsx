@@ -1,4 +1,9 @@
+import { useState } from "react";
 import logo from "../../assets/logo.png";
+import { PrimaryButton } from "../Buttons";
+import NavLinks from "./NavLinks";
+import MobileNav from "./MobileNav";
+
 const AppLogo = () => {
   return (
     <img
@@ -10,9 +15,34 @@ const AppLogo = () => {
 };
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between p-4 border bg-transparent rounded-full mx-4 mt-6 fixed top-0 left-0 right-0 z-50">
       <AppLogo />
+
+      {/* desktop links — hidden on mobile */}
+      <div className="hidden md:flex">
+        <NavLinks />
+      </div>
+
+      {/* desktop button — hidden on mobile */}
+      <div className="hidden md:block">
+        <PrimaryButton text="Join Now" />
+      </div>
+
+      {/* hamburger button — only on mobile */}
+      <button
+        onClick={() => setIsOpen(true)}
+        className="md:hidden text-white text-2xl mr-0.5"
+        aria-label="Open menu"
+        aria-expanded={isOpen}
+        aria-controls="mobile-menu"
+      >
+        ☰
+      </button>
+
+      <MobileNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );
 };
