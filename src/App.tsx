@@ -1,10 +1,13 @@
+import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div className="bg-(--color-primary) px-4 min-h-screen w-screen overflow-x-hidden">
+    <div className="bg-(--color-primary) px-5 lg:px-10 h-screen w-screen overflow-x-hidden">
       <Navbar />
-      <div className="pt-20"></div>
+      <div>
+        <Hero />
+      </div>
     </div>
   );
 };

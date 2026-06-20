@@ -18,7 +18,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between p-4 border bg-transparent rounded-full mx-4 mt-6 fixed top-0 left-0 right-0 z-50">
+    <div className="flex items-center justify-between border border-gray-300 bg-transparent rounded-full px-4 py-3 mt-4 fixed left-0 right-0 z-50 mx-5">
       <AppLogo />
 
       {/* desktop links — hidden on mobile */}
