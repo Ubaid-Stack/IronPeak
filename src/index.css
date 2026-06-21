@@ -21,7 +21,7 @@
   --color-success: #34d399;
 
   /* Gradients */
-  --gradient-hero: radial-gradient(ellipse at 70% 50%, #1e2128 0%, #0a0b0e 70%);
+  --gradient-hero: radial-gradient(ellipse at 50% 50%, #1e2128 0%, #0a0b0e 70%);
   --gradient-cta: linear-gradient(135deg, #d4ff47 0%, #b8e63a 100%);
   --gradient-card: linear-gradient(145deg, #15171c 0%, #1a1d24 100%);
 
