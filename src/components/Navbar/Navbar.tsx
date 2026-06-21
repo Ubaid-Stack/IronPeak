@@ -3,6 +3,7 @@ import logo from "../../assets/logo.png";
 import { PrimaryButton } from "../Buttons";
 import NavLinks from "./NavLinks";
 import MobileNav from "./MobileNav";
+import { TextAlignJustify } from "lucide-react";
 
 const AppLogo = () => {
   return (
@@ -19,7 +20,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-4 inset-x-0 z-50 px-5">
-      <div className="flex items-center justify-between border border-gray-300 bg-transparent rounded-full px-4 py-3 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between bg-transparent rounded-full px-4 py-3 max-w-7xl mx-auto">
         <AppLogo />
 
         {/* desktop links — hidden on mobile */}
@@ -40,7 +41,7 @@ const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          ☰
+          <TextAlignJustify />
         </button>
 
         <MobileNav isOpen={isOpen} onClose={() => setIsOpen(false)} />

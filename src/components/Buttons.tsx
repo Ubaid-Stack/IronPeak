@@ -11,12 +11,12 @@ export const PrimaryButton = ({ text, icon }: ButtonProps) => (
         font-semibold text-md 
         hover:scale-105 hover:shadow-[0_0_40px_rgba(212,255,71,0.3)] 
         cursor-pointer transition-all duration-300
-        flex items-center
+        flex items-center gap-2
         w-fit
       `}
   >
-    {icon && <span>{icon}</span>}
     {text}
+    {icon && <span>{icon}</span>}
   </button>
 );
 
