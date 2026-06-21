@@ -15,8 +15,7 @@ const Hero = () => {
           </h1>
           <Description
             text="Join a community dedicated to helping you achieve your fitness goals through expert coaching, modern equipment, and personalized training programs."
-            className="block max-w-xl text-base leading-relaxed
-            text-(--color-text-white)/70 sm:text-lg md:text-xl xl:text-2xl mt-2"
+            
           />
           <div className="flex flex-col gap-4 mt-3 md:flex-row">
             <PrimaryButton text="Start Today" />

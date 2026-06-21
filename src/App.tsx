@@ -8,6 +8,7 @@ const App = () => {
       <div>
         <Hero />
       </div>
+        <Hero />
     </div>
   );
 };
