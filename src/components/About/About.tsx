@@ -15,7 +15,7 @@ const About = () => {
           <Heading text="Empowering Your Digital Journey with IronPeak" />
           <Description text="Iron Peak is a community built around results. From world-class equipment to coaches who genuinely care, every detail is designed to help you train smarter, recover better, and reach goals you didn't think were possible." />
 
-          <div className="mt-5 space-y-4">
+          <div className="mt-8 space-y-4">
             <AboutCard
               title="Certified Coaches"
               description="Trained, accredited professionals in every discipline."

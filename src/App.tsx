@@ -2,6 +2,7 @@ import About from "./components/About/About";
 import Container from "./components/Container";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import Program from "./components/Program/Program";
 
 const App = () => {
   return (
@@ -15,6 +16,11 @@ const App = () => {
       <section className="bg-(--color-secondary) py-18">
         <Container>
           <About />
+        </Container>
+      </section>
+      <section className="py-18">
+        <Container>
+          <Program />
         </Container>
       </section>
     </>

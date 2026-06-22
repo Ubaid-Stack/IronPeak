@@ -1,6 +1,7 @@
 interface ButtonProps {
-  text: string;
+  text?: string;
   icon?: React.ReactNode;
+  className?: string;
 }
 
 export const PrimaryButton = ({ text, icon }: ButtonProps) => (
@@ -15,7 +16,7 @@ export const PrimaryButton = ({ text, icon }: ButtonProps) => (
         w-fit
       `}
   >
-    {text}
+    {text && <span>{text}</span>}
     {icon && <span>{icon}</span>}
   </button>
 );
@@ -31,21 +32,22 @@ export const SecondaryButton = ({ text, icon }: ButtonProps) => (
       `}
   >
     {icon && <span>{icon}</span>}
-    {text}
+    {text && <span>{text}</span>}
   </button>
 );
 
-export const GhostButton = ({ text, icon }: ButtonProps) => (
+export const GhostButton = ({ text, icon, className }: ButtonProps) => (
   <button
     className={`
-        bg-transparent text-[#D4FF47] px-6 py-3 rounded-full
-        font-semibold text-md border-2 border-[#D4FF47]
-        hover:bg-[#D4FF47] hover:text-black hover:scale-105
-        cursor-pointer transition-all duration-300
-        flex items-center gap-2 w-fit
-      `}
+      bg-transparent text-[#D4FF47] rounded-full
+      font-semibold text-md border-2 border-[#D4FF47]
+      hover:bg-[#D4FF47] hover:text-black hover:scale-105
+      cursor-pointer transition-all duration-300
+      flex items-center justify-center gap-2 w-fit
+      ${className}   
+    `}
   >
     {icon && <span>{icon}</span>}
-    {text}
+    {text && <span>{text}</span>}
   </button>
 );

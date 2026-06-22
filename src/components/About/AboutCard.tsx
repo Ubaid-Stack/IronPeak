@@ -1,3 +1,4 @@
+import CardText from "../CardText";
 interface Props {
   title: string;
   description: string;
@@ -35,11 +36,7 @@ const AboutCard = ({ title, description, icon }: Props) => {
         {icon}
       </div>
       <div className="space-y-1">
-        <h4 className="text-xl font-bold text-(--color-text-white)">{title}</h4>
-
-        <p className="leading-relaxed text-(--color-text-soft)">
-          {description}
-        </p>
+        {<CardText title={title} description={description} />}
       </div>
     </div>
   );

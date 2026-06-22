@@ -1,7 +1,14 @@
 import { GhostButton, PrimaryButton } from "../Buttons";
 import Description from "../Description";
 import heroImage from "../../assets/hero-image.png";
-import { ArrowRight, Award, Calendars, Dumbbell, Rocket, UsersRound } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Calendars,
+  Dumbbell,
+  Rocket,
+  UsersRound,
+} from "lucide-react";
 import StatCard from "../StatCard";
 
 const Hero = () => {
@@ -19,7 +26,11 @@ const Hero = () => {
           <Description text="Join a community dedicated to helping you achieve your fitness goals through expert coaching, modern equipment, and personalized training programs." />
           <div className="flex flex-col gap-4 mt-3 md:flex-row">
             <PrimaryButton text="Start Today" icon={<Rocket />} />
-            <GhostButton text="View Programs" icon={<ArrowRight />} />
+            <GhostButton
+              text="View Programs"
+              icon={<ArrowRight />}
+              className="px-6 py-3"
+            />
           </div>
         </div>
 
