@@ -1,15 +1,23 @@
+import About from "./components/About/About";
+import Container from "./components/Container";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div className="bg-(--color-primary) px-5 lg:px-10 h-screen w-screen overflow-x-hidden">
-      <Navbar />
-      <div>
-        <Hero />
-      </div>
-        
-    </div>
+    <>
+      <section className="[background:var(--gradient-hero)] mt-28 mb-18">
+        <Container>
+          <Navbar />
+          <Hero />
+        </Container>
+      </section>
+      <section className="bg-(--color-secondary) py-18">
+        <Container>
+          <About />
+        </Container>
+      </section>
+    </>
   );
 };
 
