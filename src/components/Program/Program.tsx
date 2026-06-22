@@ -44,9 +44,9 @@ const programs = [
 const Program = () => {
   return (
     <section className="py-18">
-      <SectionHeading title="About Us" />
-      <Heading text="Empowering Your Digital Journey with IronPeak" />
-      <Description text="Iron Peak is a community built around results. From world-class equipment to coaches who genuinely care, every detail is designed to help you train smarter, recover better, and reach goals you didn't think were possible." />
+      <SectionHeading title="Our Programs" />
+      <Heading text="Training for Every Goal" />
+      <Description text="Whether you're building strength, losing weight, or recovering, we have a program engineered to get you there." />
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
         {programs.map((program, index) => (
           <ProgramCard
