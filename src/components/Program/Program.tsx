@@ -8,6 +8,8 @@ import ProgramCard from "./ProgramCard";
 import Description from "../Description";
 import Heading from "../heading";
 import SectionHeading from "../SectionHeading";
+import { ArrowUpRight } from "lucide-react";
+import { GhostButton } from "../Buttons";
 
 const programs = [
   {
@@ -43,7 +45,7 @@ const programs = [
 ];
 const Program = () => {
   return (
-    <section className="py-18">
+    <section>
       <SectionHeading title="Our Programs" />
       <Heading text="Training for Every Goal" />
       <Description text="Whether you're building strength, losing weight, or recovering, we have a program engineered to get you there." />
@@ -54,6 +56,12 @@ const Program = () => {
             src={program.src}
             alt={program.alt}
             title={program.title}
+            children={
+              <GhostButton
+                icon={<ArrowUpRight size={18} />}
+                className="p-2 md:p-3 lg:p-4 group-hover:bg-[#D4FF47] group-hover:text-black shrink-0"
+              />
+            }
           />
         ))}
       </div>

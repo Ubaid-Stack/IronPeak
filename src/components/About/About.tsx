@@ -7,7 +7,7 @@ import aboutImage from "../../assets/about.avif";
 
 const About = () => {
   return (
-    <section className="py-18">
+    <section>
       <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10">
         {/* Left content */}
         <div className="flex-1">

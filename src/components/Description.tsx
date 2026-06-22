@@ -1,5 +1,5 @@
 interface Props {
-  text: string;
+  text?: string;
   className?: string;
 }
 const Description = ({ text, className }: Props) => {

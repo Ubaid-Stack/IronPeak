@@ -2,7 +2,7 @@ const CardText = ({
   title,
   description,
 }: {
-  title: string;
+  title?: string;
   description: string;
 }) => {
   return (
