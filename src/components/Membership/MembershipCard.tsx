@@ -56,7 +56,7 @@ const MembershipCard = ({
         />
         <div className="mt-auto pt-4">
           {isPopular ? (
-            <PrimaryButton text={buttonLabel} className="w-full py-3" />
+            <PrimaryButton text={buttonLabel} className="w-full" />
           ) : (
             <GhostButton text={buttonLabel} className="w-full py-3" />
           )}
