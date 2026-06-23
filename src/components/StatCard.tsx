@@ -20,6 +20,7 @@ const StatCard = ({ icon, title, value }: Props) => {
         hover:-translate-y-1
         hover:border-(--color-cta-primary)/30
         hover:shadow-(--shadow-glow)
+        hover:cursor-pointer
       "
     >
       <div

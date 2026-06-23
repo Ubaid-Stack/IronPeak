@@ -1,5 +1,6 @@
 import About from "./components/About/About";
 import Container from "./components/Container";
+import Faq from "./components/FAQ/Faq";
 import Hero from "./components/Hero/Hero";
 import Membership from "./components/Membership/Membership";
 import Navbar from "./components/Navbar/Navbar";
@@ -39,6 +40,11 @@ const App = () => {
       <section className="bg-(--color-secondary) py-18">
         <Container>
           <Membership />
+        </Container>
+      </section>
+      <section className="py-18">
+        <Container>
+          <Faq />
         </Container>
       </section>
     </>

@@ -43,7 +43,7 @@ const MembershipCard = ({
       <div
         className={`flex flex-col gap-5 h-full rounded-3xl border 
         ${isPopular ? "border-(--color-cta-primary) py-10" : "border-white/10 py-6"} 
-        bg-(--color-surface) px-5 transition-all duration-300 hover:-translate-y-1`}
+        bg-(--color-surface) hover:cursor-pointer px-5 transition-all duration-300 hover:-translate-y-1`}
       >
         <CardText title={title} description={description} />
         <div className="flex items-end gap-2">

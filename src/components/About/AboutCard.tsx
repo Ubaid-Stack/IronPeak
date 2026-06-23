@@ -3,7 +3,7 @@ import CardText from "../CardText";
 interface Props {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   className?: string;
   iconClassName?: string;  // ← control icon wrapper from outside
 }
@@ -24,6 +24,7 @@ const AboutCard = ({
         px-5 py-4 mt-3
         transition-all duration-300
         hover:-translate-y-1
+        hover:cursor-pointer
         ${className}
       `}
     >

@@ -45,6 +45,7 @@ const About = () => {
             transition-all duration-300
             hover:border-(--color-cta-primary)/30
             hover:shadow-(--shadow-glow)
+            hover:cursor-pointer
             "
           >
             <img
