@@ -29,7 +29,7 @@ const TestimonialCard = ({
       </div>
 
       {/* Review */}
-      <p className="mt-8 text-lg lg:text-2xl font-medium leading-relaxed">
+      <p className="mt-8 text-lg font-medium leading-relaxed">
         "{review}"
       </p>
 
