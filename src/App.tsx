@@ -6,6 +6,7 @@ import Membership from "./components/Membership/Membership";
 import Navbar from "./components/Navbar/Navbar";
 import Team from "./components/OurTeam/Team";
 import Program from "./components/Program/Program";
+import Testimonials from "./components/Testimonial/Testimonials";
 import WhyUsSection from "./components/WhyUsSection/WhyUsSection";
 
 const App = () => {
@@ -45,6 +46,11 @@ const App = () => {
       <section className="py-18">
         <Container>
           <Faq />
+        </Container>
+      </section>
+      <section className="bg-(--color-secondary) py-18">
+        <Container>
+          <Testimonials />
         </Container>
       </section>
     </>
