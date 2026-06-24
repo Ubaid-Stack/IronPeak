@@ -5,13 +5,16 @@ import NavLinks from "./NavLinks";
 import MobileNav from "./MobileNav";
 import { TextAlignJustify } from "lucide-react";
 
-const AppLogo = () => {
+export const AppLogo = () => {
   return (
-    <img
-      src={logo}
-      alt="Ironpeak Logo"
-      className="w-10 h-10 object-contain bg-white rounded-full p-1"
-    />
+    <div className="flex items-center">
+      <img
+        src={logo}
+        alt="Ironpeak Logo"
+        className="w-10 h-10 object-contain bg-white rounded-full p-1"
+      />
+      <h1 className="uppercase text-white text-xl font-bold ml-2">Iron peak</h1>
+    </div>
   );
 };
 

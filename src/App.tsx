@@ -2,6 +2,7 @@ import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Container from "./components/Container";
 import Faq from "./components/FAQ/Faq";
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import Membership from "./components/Membership/Membership";
 import Navbar from "./components/Navbar/Navbar";
@@ -57,6 +58,11 @@ const App = () => {
       <section className="py-20">
         <Container>
           <Contact />
+        </Container>
+      </section>
+      <section className="py-20 border-t border-white/10">
+        <Container>
+          <Footer />
         </Container>
       </section>
     </>
