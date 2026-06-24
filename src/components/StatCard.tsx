@@ -26,7 +26,7 @@ const StatCard = ({ icon, title, value }: Props) => {
       <div
         className="
           flex items-center justify-center
-          rounded-full p-3 text-2xl
+          rounded-xl p-3 text-2xl
           bg-[rgb(212_255_71/0.1)]
           text-(--color-cta-primary)
           transition-all duration-300

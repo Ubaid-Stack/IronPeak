@@ -3,6 +3,7 @@ import ContactDetails from "./ContactDetails";
 import SectionHeading from "../SectionHeading";
 import Description from "../Description";
 import Heading from "../heading";
+import ContactForm from "./ContactForm";
 
 const contactInfo = [
   {
@@ -24,18 +25,23 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section>
-      <SectionHeading title="Get Started" />
-      <Heading text="Ready to Start Your Fitness Journey?" />
-      <Description text="Drop us a message and our team will help you find the perfect plan. Your strongest self starts today." />
-      {contactInfo.map((info, index) => (
-        <ContactDetails
-          key={index}
-          title={info.title}
-          name={info.name}
-          icon={info.icon}
-        />
-      ))}
+    <section className="grid gap-10 lg:grid-cols-2">
+      <div className="">
+          <SectionHeading title="Get Started" />
+          <Heading text="Ready to Start Your Fitness Journey?" />
+          <Description text="Drop us a message and our team will help you find the perfect plan. Your strongest self starts today." />
+          {contactInfo.map((info, index) => (
+            <ContactDetails
+              key={index}
+              title={info.title}
+              name={info.name}
+              icon={info.icon}
+            />
+          ))}
+      </div>
+      <div className="">
+        <ContactForm />
+      </div>
     </section>
   );
 };
