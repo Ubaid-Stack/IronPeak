@@ -1,4 +1,5 @@
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Container from "./components/Container";
 import Faq from "./components/FAQ/Faq";
 import Hero from "./components/Hero/Hero";
@@ -51,6 +52,11 @@ const App = () => {
       <section className="bg-(--color-secondary) py-18">
         <Container>
           <Testimonials />
+        </Container>
+      </section>
+      <section className="py-18">
+        <Container>
+          <Contact />
         </Container>
       </section>
     </>
