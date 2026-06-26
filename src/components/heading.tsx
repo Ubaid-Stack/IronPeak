@@ -1,12 +1,11 @@
-
-const heading = ({ text }: { text: string }) => {
-  return (
-    <div>
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-3 text-(--color-text-white)">
-        {text}
-      </h2>
-    </div>
-  )
+interface HeadingProps {
+  text: string;
 }
 
-export default heading
+const Heading = ({ text }: HeadingProps) => (
+  <h2 className="mt-3 text-2xl font-bold text-(--color-text-white) md:text-3xl lg:text-4xl">
+    {text}
+  </h2>
+);
+
+export default Heading;

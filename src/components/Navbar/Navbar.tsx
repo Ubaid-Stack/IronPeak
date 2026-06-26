@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <header className="w-full fixed top-4 inset-x-0 z-50 px-5 lg:px-15">
       <div
-        className={`border border-white/10 backdrop:backdrop-blur-2xl rounded-xl flex items-center justify-between bg-transparent px-4 py-3 ${scrolled ? "  lg:backdrop-blur-md shadow-lg" : "bg-transparent"}`}
+        className={`border border-white/10 backdrop:backdrop-blur-2xl rounded-xl flex items-center justify-between bg-transparent px-4 py-3 ${scrolled ? "sm:bg-slate-950/70 md:bg-slate-950/70 lg:backdrop-blur-md shadow-lg" : "bg-transparent"}`}
       >
         <AppLogo />
 

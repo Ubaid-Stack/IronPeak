@@ -2,15 +2,13 @@ interface Props {
   text?: string;
   className?: string;
 }
-const Description = ({ text, className }: Props) => {
-  return (
-    <div
-      className={`block max-w-xl text-base leading-relaxed
-            text-(--color-text-white)/70 sm:text-md md:text-lg xl:text-xl mt-3 ${className}`}
-    >
-      <p>{text}</p>
-    </div>
-  );
-};
+
+const Description = ({ text, className = "" }: Props) => (
+  <p
+    className={`mt-3 block max-w-xl text-base leading-relaxed text-(--color-text-white)/70 md:text-lg xl:text-xl ${className}`}
+  >
+    {text}
+  </p>
+);
 
 export default Description;

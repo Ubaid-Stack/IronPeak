@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --spacing-15: 3.75rem;
+  --spacing-18: 4.5rem;
+  --spacing-26: 6.5rem;
+
+  --width-100: 25rem;
+  --width-120: 30rem;
+  --width-160: 40rem;
+}
+
 :root {
   /* Primary */
   --color-primary: #0a0b0e;
@@ -8,16 +18,12 @@
 
   /* CTAs */
   --color-cta-primary: #d4ff47;
+  --color-cta-secondary: #b8e63a;
   --color-cta-primary-hover: #c4f035;
-
 
   /* Text */
   --color-text-white: #ffffff;
   --color-text-soft: #9ca3af;
-
-  /* Accents */
-  --color-accent-pop: #ec4899;
-  --color-success: #34d399;
 
   /* Gradients */
   --gradient-hero: radial-gradient(ellipse at 50% 50%, #1e2128 0%, #0a0b0e 70%);
@@ -28,7 +34,8 @@
   --shadow-glow: 0 0 40px rgba(212, 255, 71, 0.15);
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
+
 body {
   background-color: var(--color-primary);
-  padding: 0px;
+  padding: 0;
 }

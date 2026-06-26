@@ -15,4 +15,3 @@ export const testimonialData = [
       "The atmosphere and equipment are world-class. I actually look forward to my workouts now.",
   },
 ];
-export default testimonialData;

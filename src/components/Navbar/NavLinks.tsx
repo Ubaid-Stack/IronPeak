@@ -1,37 +1,29 @@
+import { navbarLinks } from "../../constants/navLinks";
+
 interface NavLinksProps {
   vertical?: boolean;
   onLinkClick?: () => void;
 }
 
-const NavLinks = ({ vertical = false, onLinkClick }: NavLinksProps) => {
-  const links = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Programs", href: "#" },
-    { label: "Trainers", href: "#" },
-    { label: "Pricing", href: "#" },
-    { label: "Contact", href: "#" },
-  ];
-
-  return (
-    <div
-      className={`flex ${
-        vertical ? "flex-col items-start gap-6" : "lg:items-center gap-8"
-      } text-(--color-text-soft) font-medium text-sm `}
-    >
-      {links.map((link, index) => (
-        <a
-          key={index}
-          href={link.href}
-          onClick={onLinkClick}
-          className="relative transition-all duration-300 hover:text-(--color-cta-primary) group"
-        >
-          <span>{link.label}</span>
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-(--color-cta-primary) transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      ))}
-    </div>
-  );
-};
+const NavLinks = ({ vertical = false, onLinkClick }: NavLinksProps) => (
+  <nav
+    className={`flex ${
+      vertical ? "flex-col items-start gap-6" : "lg:items-center gap-12"
+    } text-sm font-medium text-(--color-text-soft)`}
+    aria-label="Main navigation"
+  >
+    {navbarLinks.map((link) => (
+      <a
+        key={link.href}
+        href={link.href}
+        onClick={onLinkClick}
+        className="group relative transition-all duration-300 hover:text-(--color-cta-primary)"
+      >
+        <span>{link.label}</span>
+        <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-(--color-cta-primary) transition-all duration-300 group-hover:w-full" />
+      </a>
+    ))}
+  </nav>
+);
 
 export default NavLinks;

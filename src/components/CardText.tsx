@@ -4,15 +4,17 @@ const CardText = ({
 }: {
   title?: string;
   description: string;
-}) => {
-  return (
-    <div>
+}) => (
+  <div>
+    {title && (
       <h4 className="text-xl font-bold text-(--color-text-white)">{title}</h4>
-      <p className="mt-1 leading-relaxed text-(--color-text-soft)">
-        {description}
-      </p>
-    </div>
-  );
-};
+    )}
+    <p
+      className={`leading-relaxed text-(--color-text-soft) ${title ? "mt-1" : ""}`}
+    >
+      {description}
+    </p>
+  </div>
+);
 
 export default CardText;

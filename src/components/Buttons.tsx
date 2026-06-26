@@ -2,35 +2,28 @@ interface ButtonProps {
   text?: string;
   icon?: React.ReactNode;
   className?: string;
+  type?: "button" | "submit";
 }
 
-export const PrimaryButton = ({ text, icon, className }: ButtonProps) => (
+export const PrimaryButton = ({
+  text,
+  icon,
+  className = "",
+  type = "button",
+}: ButtonProps) => (
   <button
-    className={`
-        bg-linear-to-br from-[#D4FF47] to-[#B8E63A] 
-        text-black px-6 py-3 rounded-xl
-        font-semibold text-md 
-        hover:scale-105 hover:shadow-[0_0_40px_rgba(212,255,71,0.3)] 
-        cursor-pointer transition-all duration-300
-        flex items-center justify-center gap-2
-        w-fit ${className}
-      `}
+    type={type}
+    className={`flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-linear-to-br from-(--color-cta-primary) to-(--color-cta-secondary) px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-(--shadow-glow) ${className}`}
   >
     {text && <span>{text}</span>}
     {icon && <span>{icon}</span>}
   </button>
 );
 
-export const GhostButton = ({ text, icon, className }: ButtonProps) => (
+export const GhostButton = ({ text, icon, className = "" }: ButtonProps) => (
   <button
-    className={`
-      bg-transparent text-[#D4FF47] rounded-xl
-      font-semibold text-md border-2 border-[#D4FF47]
-      hover:bg-[#D4FF47] hover:text-black hover:scale-105
-      cursor-pointer transition-all duration-300
-      flex items-center justify-center gap-2 w-fit
-      ${className}   
-    `}
+    type="button"
+    className={`flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl border-2 border-(--color-cta-primary) bg-transparent text-base font-semibold text-(--color-cta-primary) transition-all duration-300 hover:scale-105 hover:bg-(--color-cta-primary) hover:text-black ${className}`}
   >
     {icon && <span>{icon}</span>}
     {text && <span>{text}</span>}

@@ -1,7 +1,8 @@
-import Description from "../Description";
-import Heading from "../heading";
-import SectionHeading from "../SectionHeading";
+import { motion } from "motion/react";
+import AnimatedSection from "../AnimatedSection";
+import SectionIntro from "../SectionIntro";
 import MembershipCard from "./MembershipCard";
+import { staggerContainer, staggerItem } from "../motionVariants";
 
 const membershipPlans = [
   {
@@ -45,20 +46,28 @@ const membershipPlans = [
   },
 ];
 
-const Membership = () => {
-  return (
-    <section>
-      <SectionHeading title="Membership" />
-      <Heading text="Plans Built Around You" />
-      <Description text="Flexible, commitment-free memberships. Upgrade, downgrade, or cancel anytime." />
+const Membership = () => (
+  <AnimatedSection>
+    <SectionIntro
+      eyebrow="Membership"
+      title="Plans Built Around You"
+      description="Flexible, commitment-free memberships. Upgrade, downgrade, or cancel anytime."
+    />
 
-      <div className="mt-8 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-6 items-center">
-        {membershipPlans.map((plan) => (
-          <MembershipCard key={plan.title} {...plan} />
-        ))}
-      </div>
-    </section>
-  );
-};
+    <motion.div
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="whileInView"
+      viewport={{ once: true }}
+      className="mt-8 grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
+      {membershipPlans.map((plan) => (
+        <motion.div key={plan.title} variants={staggerItem}>
+          <MembershipCard {...plan} />
+        </motion.div>
+      ))}
+    </motion.div>
+  </AnimatedSection>
+);
 
 export default Membership;

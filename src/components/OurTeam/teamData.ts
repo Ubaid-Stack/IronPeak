@@ -1,37 +1,34 @@
-import headCoach from "../../assets/head coach.avif"
-import functionaCoach from "../../assets/functional.jpg"
-import nutritionCoach from "../../assets/Nutrition.jpg"
-import oliviaJohnson from "../../assets/Olivia Johnson.avif"
+import { images } from "../../data/images";
 
-const teamMember = [
+const teamMembers = [
   {
     name: "Ethan Carter",
     role: "Head Strength Coach",
     specialty: "Powerlifting & Hypertrophy",
-    image: headCoach,
+    image: images.headCoach,
     alt: "Ethan Carter - Head Strength Coach",
   },
   {
     name: "Sophia Martinez",
     role: "Nutrition Coach",
     specialty: "Body Composition & Fueling",
-    image: nutritionCoach,
+    image: images.nutritionCoach,
     alt: "Sophia Martinez - Nutrition Coach",
   },
   {
     name: "Ryan Walker",
     role: "Functional Fitness Trainer",
     specialty: "Mobility & Conditioning",
-    image: functionaCoach,
+    image: images.functionalCoach,
     alt: "Ryan Walker - Functional Fitness Trainer",
   },
   {
     name: "Olivia Johnson",
     role: "Yoga & Recovery Specialist",
     specialty: "Flexibility & Mindfulness",
-    image: oliviaJohnson,
+    image: images.yogaCoach,
     alt: "Olivia Johnson - Yoga & Recovery Specialist",
   },
 ];
 
-export default teamMember;
+export default teamMembers;

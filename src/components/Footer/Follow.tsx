@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+import { footerHeadingClass } from "../../constants/styles";
 
 interface SocialLink {
   icon: IconType;
@@ -19,29 +20,27 @@ const socialLinks: SocialLink[] = [
   { icon: FaYoutube, href: "#", label: "YouTube" },
 ];
 
-const SocialFollow = () => {
-  return (
-    <div className="space-y-4">
-      <h3 className="text-lg text-white font-semibold">Follow Us</h3>
+const SocialFollow = () => (
+  <div className="space-y-4">
+    <h3 className={footerHeadingClass}>Follow Us</h3>
 
-      <div className="flex gap-3">
-        {socialLinks.map(({ icon: Icon, href, label }) => (
-          <a
-            key={label}
-            href={href}
-            aria-label={label}
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 text-(--color-text-soft) transition-all duration-200 hover:border-(--color-cta-primary) hover:text-(--color-cta-primary)"
-          >
-            <Icon size={18} />
-          </a>
-        ))}
-      </div>
-
-      <p className="text-sm leading-relaxed text-(--color-text-soft)">
-        Join our newsletter for tips, programs, and member offers.
-      </p>
+    <div className="flex gap-3">
+      {socialLinks.map(({ icon: Icon, href, label }) => (
+        <a
+          key={label}
+          href={href}
+          aria-label={label}
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 text-(--color-text-soft) transition-all duration-200 hover:border-(--color-cta-primary) hover:text-(--color-cta-primary)"
+        >
+          <Icon size={18} />
+        </a>
+      ))}
     </div>
-  );
-};
+
+    <p className="text-sm leading-relaxed text-(--color-text-soft)">
+      Join our newsletter for tips, programs, and member offers.
+    </p>
+  </div>
+);
 
 export default SocialFollow;

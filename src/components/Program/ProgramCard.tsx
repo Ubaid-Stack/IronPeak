@@ -3,11 +3,10 @@ import CardText from "../CardText";
 interface Props {
   src: string;
   alt: string;
-  icon?: React.ReactNode;
   title: string;
   description?: string;
-  children?: React.ReactNode;
   role?: string;
+  children?: React.ReactNode;
 }
 
 const ProgramCard = ({
@@ -15,43 +14,37 @@ const ProgramCard = ({
   alt,
   title,
   description,
-  children,
   role,
-}: Props) => {
-  return (
-    <div className="relative group cursor-pointer">
-      {/* Glow */}
-      <div className="absolute -inset-2 md:-inset-3 lg:-inset-4 rounded-3xl blur-lg transition-all duration-500 group-hover:bg-[#D4FF47]/15" />
+  children,
+}: Props) => (
+  <div className="group relative cursor-pointer">
+    <div className="absolute -inset-2 rounded-3xl blur-lg transition-all duration-500 group-hover:bg-(--color-cta-primary)/15 md:-inset-3 lg:-inset-4" />
 
-      {/* Card */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[#D4FF47]/20 ">
-        <img
-          src={src}
-          alt={alt}
-          className="w-full lg:w-120 h-80 aspect-4/5 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+    <div className="relative overflow-hidden rounded-3xl border border-white/10 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-(--color-cta-primary)/20">
+      <img
+        src={src}
+        alt={alt}
+        className="aspect-4/5 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
 
-        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
 
-        {/* Bottom row */}
-        <div className="absolute bottom-0 left-0 right-0 px-5 py-4 md:px-6 md:py-5 lg:px-7 lg:py-6 flex items-end justify-between gap-3">
-          {/* Title + description stacked */}
-          <div className="flex flex-col gap-1">
-            <span className="text-white font-semibold text-lg md:text-xl lg:text-2xl leading-snug">
-              {title}
-            </span>
+      <div className="absolute right-0 bottom-0 left-0 flex items-end justify-between gap-3 px-5 py-4 md:px-6 md:py-5 lg:px-7 lg:py-6">
+        <div className="flex flex-col gap-1">
+          <span className="text-lg leading-snug font-semibold text-white md:text-xl lg:text-2xl">
+            {title}
+          </span>
+          {role && (
             <span className="leading-relaxed text-(--color-cta-primary)">
               {role}
             </span>
-            {description && <CardText description={description} />}
-          </div>
-
-          {/* Icon button */}
-          {children}
+          )}
+          {description && <CardText description={description} />}
         </div>
+        {children}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default ProgramCard;

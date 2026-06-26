@@ -1,72 +1,53 @@
-import strengtImage from "../../assets/Strength-Training.jpg";
-import lossImage from "../../assets/Weight-Loss-Program.jpg";
-import funtionalImage from "../../assets/fucntional.jpg";
-import boxingImage from "../../assets/boxing.webp";
-import yogaImage from "../../assets/yoga.jpg";
-import personalImage from "../../assets/personal.webp";
-import ProgramCard from "./ProgramCard";
-import Description from "../Description";
-import Heading from "../heading";
-import SectionHeading from "../SectionHeading";
+import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { images } from "../../data/images";
+import { sectionGrid } from "../../constants/styles";
 import { GhostButton } from "../Buttons";
+import AnimatedSection from "../AnimatedSection";
+import ProgramCard from "./ProgramCard";
+import SectionIntro from "../SectionIntro";
+import { staggerContainer, staggerItem } from "../motionVariants";
 
 const programs = [
-  {
-    src: strengtImage,
-    alt: "Strength Training",
-    title: "Strength Training",
-  },
-  {
-    src: lossImage,
-    alt: "Weight Loss Program",
-    title: "Weight Loss Program",
-  },
-  {
-    src: funtionalImage,
-    alt: "Functional Fitness",
-    title: "Functional Fitness",
-  },
-  {
-    src: boxingImage,
-    alt: "Boxing & Conditioning",
-    title: "Boxing & Conditioning",
-  },
-  {
-    src: yogaImage,
-    alt: "Yoga & Recovery",
-    title: "Yoga & Recovery",
-  },
-  {
-    src: personalImage,
-    alt: "Personal Training",
-    title: "Personal Training",
-  },
+  { src: images.strengthTraining, alt: "Strength Training", title: "Strength Training" },
+  { src: images.weightLoss, alt: "Weight Loss Program", title: "Weight Loss Program" },
+  { src: images.functional, alt: "Functional Fitness", title: "Functional Fitness" },
+  { src: images.boxing, alt: "Boxing & Conditioning", title: "Boxing & Conditioning" },
+  { src: images.yoga, alt: "Yoga & Recovery", title: "Yoga & Recovery" },
+  { src: images.personal, alt: "Personal Training", title: "Personal Training" },
 ];
-const Program = () => {
-  return (
-    <section>
-      <SectionHeading title="Our Programs" />
-      <Heading text="Training for Every Goal" />
-      <Description text="Whether you're building strength, losing weight, or recovering, we have a program engineered to get you there." />
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
-        {programs.map((program, index) => (
+
+const Program = () => (
+  <AnimatedSection>
+    <SectionIntro
+      eyebrow="Our Programs"
+      title="Training for Every Goal"
+      description="Whether you're building strength, losing weight, or recovering, we have a program engineered to get you there."
+    />
+
+    <motion.div
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="whileInView"
+      viewport={{ once: true }}
+      className={sectionGrid}
+    >
+      {programs.map((program) => (
+        <motion.div key={program.title} variants={staggerItem}>
           <ProgramCard
-            key={index}
             src={program.src}
             alt={program.alt}
             title={program.title}
-            children={
-              <GhostButton
-                icon={<ArrowUpRight size={18} />}
-                className="p-2 md:p-3 lg:p-4 group-hover:bg-[#D4FF47] group-hover:text-black shrink-0"
-              />
-            }
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+          >
+            <GhostButton
+              icon={<ArrowUpRight size={18} />}
+              className="shrink-0 p-2 md:p-3 lg:p-4 group-hover:bg-(--color-cta-primary) group-hover:text-black"
+            />
+          </ProgramCard>
+        </motion.div>
+      ))}
+    </motion.div>
+  </AnimatedSection>
+);
 
 export default Program;
