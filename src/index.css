@@ -1,13 +1,6 @@
 @import "tailwindcss";
-
-@theme {
-  --spacing-15: 3.75rem;
-  --spacing-18: 4.5rem;
-  --spacing-26: 6.5rem;
-
-  --width-100: 25rem;
-  --width-120: 30rem;
-  --width-160: 40rem;
+html {
+  scroll-behavior: smooth;
 }
 
 :root {

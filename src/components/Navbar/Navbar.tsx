@@ -5,6 +5,12 @@ import NavLinks from "./NavLinks";
 import MobileNav from "./MobileNav";
 import { TextAlignJustify } from "lucide-react";
 
+interface NavbarProps {
+  activeSection: string;
+}
+
+
+
 export const AppLogo = () => {
   return (
     <div className="flex items-center">
@@ -18,7 +24,7 @@ export const AppLogo = () => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ activeSection }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -36,13 +42,13 @@ const Navbar = () => {
   return (
     <header className="w-full fixed top-4 inset-x-0 z-50 px-5 lg:px-15">
       <div
-        className={`border border-white/10 backdrop:backdrop-blur-2xl rounded-xl flex items-center justify-between bg-transparent px-4 py-3 ${scrolled ? "sm:bg-slate-950/70 md:bg-slate-950/70 lg:backdrop-blur-md shadow-lg" : "bg-transparent"}`}
+        className={`border border-white/10 backdrop:backdrop-blur-2xl rounded-xl flex items-center justify-between bg-transparent px-4 py-3 ${scrolled ? "bg-slate-950/70 md:bg-slate-950/70 lg:backdrop-blur-md shadow-lg" : "bg-transparent"}`}
       >
         <AppLogo />
 
         {/* desktop links — hidden on mobile */}
         <div className="hidden lg:flex">
-          <NavLinks />
+          <NavLinks activeSection={activeSection} />
         </div>
 
         {/* desktop button — hidden on mobile */}

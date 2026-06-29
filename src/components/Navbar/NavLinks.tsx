@@ -3,9 +3,11 @@ import { navbarLinks } from "../../constants/navLinks";
 interface NavLinksProps {
   vertical?: boolean;
   onLinkClick?: () => void;
+  activeSection: string;
 }
 
-const NavLinks = ({ vertical = false, onLinkClick }: NavLinksProps) => (
+
+const NavLinks = ({ vertical = false, onLinkClick, activeSection }: NavLinksProps) => (
   <nav
     className={`flex ${
       vertical ? "flex-col items-start gap-6" : "lg:items-center gap-12"
@@ -17,7 +19,9 @@ const NavLinks = ({ vertical = false, onLinkClick }: NavLinksProps) => (
         key={link.href}
         href={link.href}
         onClick={onLinkClick}
-        className="group relative transition-all duration-300 hover:text-(--color-cta-primary)"
+        className={`group relative transition-all duration-300 hover:text-(--color-cta-primary) ${
+          activeSection === link.href.slice(1) ? "text-(--color-cta-primary)" : ""
+        }`}
       >
         <span>{link.label}</span>
         <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-(--color-cta-primary) transition-all duration-300 group-hover:w-full" />
