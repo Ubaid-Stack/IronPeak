@@ -13,7 +13,7 @@ export const PrimaryButton = ({
 }: ButtonProps) => (
   <button
     type={type}
-    className={`flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-linear-to-br from-(--color-cta-primary) to-(--color-cta-secondary) px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-(--shadow-glow) ${className}`}
+    className={`flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl bg-linear-to-br from-(--color-cta-primary) to-(--color-cta-secondary) border-2 border-(--color-cta-primary) px-6 py-3 text-base font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-(--shadow-glow) ${className}`}
   >
     {text && <span>{text}</span>}
     {icon && <span>{icon}</span>}
