@@ -11,6 +11,7 @@ import Program from "./components/Program/Program";
 import Testimonials from "./components/Testimonial/Testimonials";
 import WhyUsSection from "./components/WhyUsSection/WhyUsSection";
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -79,6 +80,7 @@ const App = () => {
       <PageSection variant="footer">
         <Footer />
       </PageSection>
+      <Analytics />
     </>
   );
 };
