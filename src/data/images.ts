@@ -1,25 +1,25 @@
-/** Placeholder gym imagery — swap with local assets in src/assets when ready */
+import aboutImage from "../assets/about.avif";
+import boxingImage from "../assets/boxing.webp";
+import functionalImage from "../assets/fucntional.jpg";
+import functionalCoachImage from "../assets/functional.jpg";
+import headCoachImage from "../assets/head coach.avif";
+import nutritionCoachImage from "../assets/Nutrition.jpg";
+import oliviaCoachImage from "../assets/Olivia Johnson.avif";
+import personalImage from "../assets/personal.webp";
+import strengthTrainingImage from "../assets/Strength-Training.jpg";
+import weightLossImage from "../assets/Weight-Loss-Program.jpg";
+import yogaImage from "../assets/yoga.jpg";
+
 export const images = {
-  about:
-    "src/assets/about.avif",
-  strengthTraining:
-    "src/assets/Strength-Training.jpg",
-  weightLoss:
-    "src/assets/Weight-Loss-Program.jpg",
-  functional:
-    "src/assets/fucntional.jpg",
-  boxing:
-    "src/assets/boxing.webp",
-  yoga:
-    "src/assets/yoga.jpg",
-  personal:
-    "src/assets/personal.webp",
-  headCoach:
-    "src/assets/head coach.avif",
-  nutritionCoach:
-    "src/assets/Nutrition.jpg",
-  functionalCoach:
-    "src/assets/functional.jpg",
-  yogaCoach:
-    "src/assets/Olivia Johnson.avif",
+  about: aboutImage,
+  strengthTraining: strengthTrainingImage,
+  weightLoss: weightLossImage,
+  functional: functionalImage,
+  boxing: boxingImage,
+  yoga: yogaImage,
+  personal: personalImage,
+  headCoach: headCoachImage,
+  nutritionCoach: nutritionCoachImage,
+  functionalCoach: functionalCoachImage,
+  yogaCoach: oliviaCoachImage,
 } as const;
