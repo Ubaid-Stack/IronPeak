@@ -1,9 +1,9 @@
-import type { FormEvent } from "react";
+import { type SubmitEvent } from "react";
 import { PrimaryButton } from "../Buttons";
 import { inputClass } from "../../constants/styles";
 
 const ContactForm = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e:SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
@@ -25,6 +25,7 @@ const ContactForm = () => {
               type="text"
               id="name"
               name="name"
+              autoComplete="name"
               required
               placeholder="John Doe"
               className={inputClass}
@@ -42,6 +43,7 @@ const ContactForm = () => {
               type="email"
               id="email"
               name="email"
+              autoComplete="email"
               required
               placeholder="john@example.com"
               className={inputClass}
@@ -59,6 +61,7 @@ const ContactForm = () => {
           <textarea
             id="message"
             name="message"
+            autoComplete="off"
             required
             rows={5}
             placeholder="Tell us how we can help..."

@@ -9,8 +9,6 @@ interface NavbarProps {
   activeSection: string;
 }
 
-
-
 export const AppLogo = () => {
   return (
     <div className="flex items-center">

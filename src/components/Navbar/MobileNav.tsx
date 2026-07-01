@@ -58,7 +58,7 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
           <div className="text-(--color-text-soft) hover:text-white flex justify-end -mb-15px cursor-pointer">
             <X onClick={onClose} />
           </div>
-          <NavLinks vertical onLinkClick={onClose} />
+          <NavLinks activeSection="" vertical onLinkClick={onClose} />
           <PrimaryButton text="Join Now" />
         </div>
       </div>
