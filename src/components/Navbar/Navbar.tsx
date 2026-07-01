@@ -50,9 +50,9 @@ const Navbar = ({ activeSection }: NavbarProps) => {
         </div>
 
         {/* desktop button — hidden on mobile */}
-        <div className="hidden lg:block">
+        <a href="#contact" className="hidden lg:block">
           <PrimaryButton text="Join Now" />
-        </div>
+        </a>
 
         {/* hamburger button — only on mobile */}
         <button

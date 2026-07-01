@@ -43,12 +43,16 @@ const Hero = () => (
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-3 flex flex-col gap-4 md:flex-row"
         >
-          <PrimaryButton text="Start Today" icon={<Rocket />} />
-          <GhostButton
-            text="View Programs"
-            icon={<ArrowRight />}
-            className="px-6 py-3"
-          />
+          <a href="#contact">
+            <PrimaryButton text="Start Today" icon={<Rocket />} />
+          </a>
+          <a href="#programs">
+            <GhostButton
+              text="View Programs"
+              icon={<ArrowRight />}
+              className="px-6 py-3"
+            />
+          </a>
         </motion.div>
       </div>
 
